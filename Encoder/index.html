@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="link/min1.css">
+<script src="link/boot.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+body{
+    background-color: rgb(34, 34, 34);
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-1{
+    padding: 100px;
+}
+
+
+</style>
+<body>
+
+<div class="div-1">
+    <div class="middle">
+        <div>
+            <label for="file" class="form-lable">Input File</label>
+            <input class="form-control" type="file" id="file" onchange="loadFile(this.files[0])">
+        </div>
+    </div>
+    <div class="middle" style="padding: 50px 0;flex-direction: column;">
+        <div id="button">
+            <!-- <button id="button" class="btn btn-light" onclick="encode()">Encode</button> -->
+        </div>
+        <div style="padding: 50px;">
+            <canvas id="canvas" width="121" height="121"></canvas>
+            <div class="middle" id="download">
+                <!-- <button class="btn btn-light" onclick="download('txt')">Download</button> -->
+            </div>
+        </div>
+        <div style="color: white;border: 1px solid white;padding: 50px; visibility:hidden;" id="output">
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+<script src="index.js"></script>
+
+</html>
