@@ -1,3 +1,2 @@
 # repository 
-
-> https://github.com/imposter404/Encoder
+[/Encoder](https://github.com/imposter404/Encoder)
