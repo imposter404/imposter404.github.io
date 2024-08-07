@@ -4,21 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-
+</head>
 <style>
 body{
-    background: rgb(37, 37, 37);
+    margin: 0;
+    height: 100dvh 100px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
+}    
+
+:root{
+    --yellow:rgb(217, 255, 0)
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop{
+    position: fixed;
+    inset: 0 0 0 0;
+    backdrop-filter: blur(40px);
+    z-index: -1;
+    background: linear-gradient(180deg,#00010c, #000000b6, #000222),linear-gradient(90deg,#00000080, #00000000, #00000080),url(pic/background.png)no-repeat center/cover;
+}
+
+
+.div-1{
+    padding: 80px;
+    .flex{
+        display: flex;
+    }
+    .flex-div{
+        flex:50%;
+    }
+    .circle{
+        border-radius: 100%;
+        height: 250px;
+        width: 250px;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+}
+
+.div-2{
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flex-div{
+        padding: 50px;
+        flex: auto;
+    }
+    .card1{
+        padding: 15px 15px;
+        width: 300px;
+        height: 150px;
+        border:2px solid white ;
+        border-radius: 15px;
+        transition: all .2s ease-in-out;
+        box-shadow: 0 0 0 0px white;
+        &:hover{
+            transform:translateY(-10px);
+            box-shadow: 0 30px 0px 0px white;
+            backdrop-filter: blur(20px);
+            color: red;  
+        }
+        .repo{
+            background: url(pic/git-repo.png) no-repeat center/contain;
+            height:20px ;
+            aspect-ratio: 1/1;
+        }
+    }
 }
 
 </style>
 <body>
 
-wellcome to github imposter 404_:)
+<div class="backdrop"></div>
+
+<div class="div-1 middle">
+    <div>
+        <div class="flex">
+            <div class="flex-div middle">
+                <div id="imposter" class="circle" style="cursor: pointer;" onclick='window.open("https://github.com/imposter404")'>
+                    <img src="pic/imposter404.jpg" width="250px" height="250px">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: 50px;color: red;background: #00000050;padding: 0px 50px;border-radius: 50px;">
+                imposter404
+            </div>
+            <div class="middle" style="font-family:monospace;color: #ffdf00;padding: 5px;">
+                github/imposter404
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="middle" style="width: 100%;">
+    <div style="border-bottom: 1px solid gray;width: 80%;"></div>
+</div>
+
+<div class="div-2 middle">
+    <div class="flex">
+        <div class="flex-div middle">
+            <div class="card1" style="background: linear-gradient(0deg);cursor: pointer;" onclick='window.open("https://imposter404.github.io/Encoder")'>
+                <div style="display: flex;flex-direction: row;cursor: pointer;" onclick='window.open("https://github.com/imposter404/Encoder")';>
+                    <div class="middle">
+                        <div class="repo middle"></div>
+                    </div>
+                    <div class="middle" style="margin-left:20px;color:var(--yellow);padding: 5px;border-bottom: 1px solid gray;width: 100%;justify-content: left;">
+                        imposter404 / Encoder
+                    </div>
+                </div>
+                <div class="middle" style="height: 125px;">
+                    <div class="name" style="font-size: 30px; font-weight: 800;"> Encoder </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-div middle">
+            <div class="card1" style="background: linear-gradient(0deg);">
+                <div style="display: flex;flex-direction: row;cursor: pointer" onclick='window.open("https://github.com/imposter404/Algorithm")'>
+                    <div class="middle">
+                        <div class="repo middle"></div>
+                    </div>
+                    <div class="middle" style="margin-left:20px;color:var(--yellow);padding: 5px;border-bottom: 1px solid gray;width: 100%;justify-content: left;">
+                        imposter404 / Algorithm
+                    </div>
+                </div>
+                <div class="middle" style="height: 125px;">
+                    <div style="font-size: 30px; font-weight: 800;"> Algorithm </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-div middle">
+            <div class="card1" style="background: linear-gradient(0deg);">
+                <div style="display: flex;flex-direction: row;cursor: pointer" onclick='window.open("https://github.com/imposter404/Computer-graphics")'>
+                    <div class="middle">
+                        <div class="repo middle"></div>
+                    </div>
+                    <div class="middle" style="margin-left:20px;color:var(--yellow);padding: 5px;border-bottom: 1px solid gray;width: 100%;justify-content: left;">
+                        imposter404 / Computer-graphics
+                    </div>
+                </div>
+                <div class="middle" style="height: 125px;">
+                    <div style="font-size: 30px; font-weight: 800;"> Graphics </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 
 
 
-</body>
+<script>
+
+onmousemove=(e)=>{
+    let imposter= document.getElementById("imposter")
+    let x=(imposter.offsetLeft+ imposter.clientWidth/2)
+    let y=(imposter.offsetTop+imposter.clientHeight/2)
+    let rad =Math.atan2(e.pageX - x,e.pageY-y);
+    let rot = (rad* (180 / Math.PI)*-1+ 180)
+    // console.log(e.clientX);
+    rot+=90;
+    console.log(rot);
+    if(rot<270)
+    {
+        rot+=180
+        document.getElementById("imposter").style.rotate=rot+'deg';
+        document.getElementById("imposter").style.transform='scaleX(-1)'
+    }
+    else
+    {
+        document.getElementById("imposter").style.rotate=rot+'deg';
+        document.getElementById("imposter").style.transform='scaleX(1)'
+    }
+}
+
+
+</script>
 </html>
