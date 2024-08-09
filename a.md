@@ -3,9 +3,7 @@
 
 - 🔭 I’m currently working on **ML**
 
-- 👨‍💻 All of my projects are available at 
-
-![Github](https://imposter404.github.io)
+- 👨‍💻 All of my projects are available at [Github](https://imposter404.github.io)
 
 
 <a href="#">
