@@ -3,7 +3,8 @@
 
 - 🔭 I’m currently working on **ML**
 
-- 👨‍💻 All of my projects are available at [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://imposter404.github.io)
+- 👨‍💻 All of my projects are available at
+ [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://imposter404.github.io)
 
 
 <a href="#">
