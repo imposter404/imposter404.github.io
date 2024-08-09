@@ -28,6 +28,4 @@
 ![](https://github-contributor-stats.vercel.app/api?username=Imposter404&limit=5&theme=radical&combine_all_yearly_contributions=true)
 
 --- 
-<p align="center">
-[![](https://visitcount.itsvg.in/api?id=Imposter404&icon=0&color=0)](https://visitcount.itsvg.in)
-</p>
+[![](https://visitcount.itsvg.in/api?id=Imposter404&icon=0&color=0)](https://visitcount.itsvg.in)
